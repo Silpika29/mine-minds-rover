@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg2)" rx="16" />
+  <rect width="896" height="556" x="2" y="2" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+
+  <!-- Title -->
+  <text x="450" y="45" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle" letter-spacing="1">
+    DUAL-LAYER SAFETY &amp; ANOMALY ARBITRATION FLOW
+  </text>
+  <text x="450" y="70" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">
+    Immediate Life Safety Rule Enforcement Coupled with Machine Learning Risk Forecasting
+  </text>
+
+  <!-- Input Telemetry Block -->
+  <g transform="translate(300, 100)">
+    <rect width="300" height="50" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="150" y="31" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      Raw Multi-Sensor Telemetry
+    </text>
+  </g>
+
+  <!-- Split arrows -->
+  <path d="M 380 150 L 250 200" stroke="#cbd5e1" stroke-width="2" fill="none" />
+  <polygon points="248,194 242,204 254,204" fill="#cbd5e1" />
+
+  <path d="M 520 150 L 650 200" stroke="#cbd5e1" stroke-width="2" fill="none" />
+  <polygon points="646,204 658,204 652,194" fill="#cbd5e1" />
+
+  <!-- Layer 1 Box -->
+  <g transform="translate(100, 210)">
+    <rect width="300" height="200" rx="10" fill="url(#cardGrad2)" stroke="#ef4444" stroke-width="1.5" />
+    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">
+      LAYER 1: DETERMINISTIC RULES
+    </text>
+    <line x1="20" y1="42" x2="280" y2="42" stroke="#334155" stroke-width="1" />
+    <text x="25" y="70" font-family="monospace" font-size="11" fill="#cbd5e1">• CH4 &gt;= 1000 ppm (CRITICAL)</text>
+    <text x="25" y="95" font-family="monospace" font-size="11" fill="#cbd5e1">• CO &gt;= 150 ppm (CRITICAL)</text>
+    <text x="25" y="120" font-family="monospace" font-size="11" fill="#cbd5e1">• Vibration &gt;= 1.0g (SEISMIC)</text>
+    <text x="25" y="145" font-family="monospace" font-size="11" fill="#cbd5e1">• Water Bridge == True (FLOOD)</text>
+    <text x="25" y="170" font-family="monospace" font-size="11" fill="#cbd5e1">• Temp &gt;= 45°C (HEAT EXTREME)</text>
+    <text x="150" y="192" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">
+      ABSOLUTE IMMEDIATE PRECEDENCE
+    </text>
+  </g>
+
+  <!-- Layer 2 Box -->
+  <g transform="translate(500, 210)">
+    <rect width="300" height="200" rx="10" fill="url(#cardGrad2)" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      LAYER 2: ML &amp; EXPLAINABLE AI
+    </text>
+    <line x1="20" y1="42" x2="280" y2="42" stroke="#334155" stroke-width="1" />
+    <text x="25" y="70" font-family="monospace" font-size="11" fill="#cbd5e1">• 5-step rolling window buffer</text>
+    <text x="25" y="95" font-family="monospace" font-size="11" fill="#cbd5e1">• 21 statistical trend features</text>
+    <text x="25" y="120" font-family="monospace" font-size="11" fill="#cbd5e1">• Random Forest (120 trees)</text>
+    <text x="25" y="145" font-family="monospace" font-size="11" fill="#cbd5e1">• 0 - 100 Composite Risk Index</text>
+    <text x="25" y="170" font-family="monospace" font-size="11" fill="#cbd5e1">• Perturbation Factor Ranking</text>
+    <text x="150" y="192" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#38bdf8" text-anchor="middle">
+      EARLY DETECTION INTELLIGENCE
+    </text>
+  </g>
+
+  <!-- Merging Arrows -->
+  <path d="M 250 410 L 380 460" stroke="#cbd5e1" stroke-width="2" fill="none" />
+  <polygon points="382,454 386,464 374,464" fill="#cbd5e1" />
+
+  <path d="M 650 410 L 520 460" stroke="#cbd5e1" stroke-width="2" fill="none" />
+  <polygon points="526,464 514,464 518,454" fill="#cbd5e1" />
+
+  <!-- Arbitrated Action Output -->
+  <g transform="translate(250, 470)">
+    <rect width="400" height="60" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <text x="200" y="27" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">
+      ARBITRATED ACTION &amp; SAFETY DISPATCH
+    </text>
+    <text x="200" y="47" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">
+      Status Broadcast • Alert Cooldown • Siren Dispatch • Evacuation Trigger
+    </text>
+  </g>
+</svg>

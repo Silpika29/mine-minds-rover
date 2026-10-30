@@ -1,0 +1,130 @@
+{
+  "model_name": "Random Forest Classifier",
+  "total_samples": 6000,
+  "training_samples": 4800,
+  "test_samples": 1200,
+  "accuracy": 100.0,
+  "precision_macro": 100.0,
+  "recall_macro": 100.0,
+  "f1_macro": 100.0,
+  "critical_recall": 100.0,
+  "classes": [
+    "NORMAL",
+    "ANOMALOUS",
+    "CRITICAL"
+  ],
+  "confusion_matrix": [
+    [
+      720,
+      0,
+      0
+    ],
+    [
+      0,
+      300,
+      0
+    ],
+    [
+      0,
+      0,
+      180
+    ]
+  ],
+  "feature_importances": [
+    {
+      "feature": "gas_std",
+      "importance": 0.17576929351195733
+    },
+    {
+      "feature": "communication_health",
+      "importance": 0.10340247123716997
+    },
+    {
+      "feature": "co_max",
+      "importance": 0.10213626175304523
+    },
+    {
+      "feature": "gas_max",
+      "importance": 0.10152968946181269
+    },
+    {
+      "feature": "vibration_std",
+      "importance": 0.08974447434622516
+    },
+    {
+      "feature": "co_average",
+      "importance": 0.06137036485339156
+    },
+    {
+      "feature": "gas_min",
+      "importance": 0.046893762056179435
+    },
+    {
+      "feature": "gas_average",
+      "importance": 0.04085311181362977
+    },
+    {
+      "feature": "humidity_current",
+      "importance": 0.03836851877072103
+    },
+    {
+      "feature": "vibration_average",
+      "importance": 0.0353280393038532
+    },
+    {
+      "feature": "gas_change",
+      "importance": 0.03368113367264421
+    },
+    {
+      "feature": "water_status",
+      "importance": 0.03303252098842665
+    },
+    {
+      "feature": "co_current",
+      "importance": 0.023519230950181675
+    },
+    {
+      "feature": "vibration_current",
+      "importance": 0.022456670765092605
+    },
+    {
+      "feature": "gas_current",
+      "importance": 0.020441417800617704
+    },
+    {
+      "feature": "gas_rate",
+      "importance": 0.01901641348177417
+    },
+    {
+      "feature": "temperature_average",
+      "importance": 0.017666507377650745
+    },
+    {
+      "feature": "co_min",
+      "importance": 0.017605302305303227
+    },
+    {
+      "feature": "co_rate",
+      "importance": 0.005770959360105229
+    },
+    {
+      "feature": "temperature_current",
+      "importance": 0.00447605701217738
+    },
+    {
+      "feature": "co_change",
+      "importance": 0.0035964914353789823
+    },
+    {
+      "feature": "temperature_rate",
+      "importance": 0.0023427260797107764
+    },
+    {
+      "feature": "battery",
+      "importance": 0.000998581662951054
+    }
+  ],
+  "last_trained_at": "2026-10-30T09:27:53.355701",
+  "is_synthetic_dataset": true,
+  "disclaimer": "Trained on synthetic prototype data modeling mine environmental anomalies. Not certified for actual mine deployment."
+}

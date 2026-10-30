@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: mining_rover_db
+    environment:
+      POSTGRES_USER: mining_user
+      POSTGRES_PASSWORD: mining_secure_password_2026
+      POSTGRES_DB: mining_rover
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mining_rover_backend
+    environment:
+      DATABASE_URL: postgresql://mining_user:mining_secure_password_2026@postgres:5432/mining_rover
+      JWT_SECRET: super-secret-mining-rover-jwt-key-2026-secure
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mining_rover_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

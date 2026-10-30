@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#bg3)" rx="16" />
+  <rect width="956" height="596" x="2" y="2" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+
+  <!-- Title -->
+  <text x="480" y="45" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#38bdf8" text-anchor="middle" letter-spacing="1">
+    HARDWARE INTERFACE &amp; ELECTRICAL PIN SCHEMATIC
+  </text>
+  <text x="480" y="70" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">
+    Microcontroller Wiring for Arduino Uno (Sensors) &amp; ESP32 (L298N Locomotion)
+  </text>
+
+  <!-- Left: Sensor Nodes -->
+  <g transform="translate(50, 110)">
+    <!-- Arduino Unit -->
+    <rect width="380" height="430" rx="12" fill="url(#cardGrad3)" stroke="#06b6d4" stroke-width="1.5" />
+    <rect width="380" height="40" rx="12" fill="#0891b2" fill-opacity="0.2" />
+    <text x="190" y="26" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">
+      ARDUINO UNO - SENSOR INTERFACE
+    </text>
+
+    <!-- Table Header -->
+    <text x="25" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">SENSOR</text>
+    <text x="150" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">PIN</text>
+    <text x="240" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">TYPE / FUNCTION</text>
+    <line x1="20" y1="75" x2="360" y2="75" stroke="#334155" stroke-width="1" />
+
+    <!-- Rows -->
+    <g transform="translate(25, 95)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#10b981">MQ-2 Gas</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">A0</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Analog (Methane/LPG)</text>
+    </g>
+
+    <g transform="translate(25, 135)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f59e0b">MQ-7 Gas</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">A1</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Analog (Carbon Monoxide)</text>
+    </g>
+
+    <g transform="translate(25, 175)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#38bdf8">DHT11/22</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">D2</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Digital (Temp / Humidity)</text>
+    </g>
+
+    <g transform="translate(25, 215)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#ec4899">SW-420</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">D3</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Digital (Ground Shock)</text>
+    </g>
+
+    <g transform="translate(25, 255)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#6366f1">Water Probe</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">D4</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Digital (Flood Sensor)</text>
+    </g>
+
+    <g transform="translate(25, 295)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#a855f7">Battery Div</text>
+      <text x="125" y="0" font-family="monospace" font-size="12" fill="#f8fafc">A2</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">10kΩ + 4.7kΩ Divider</text>
+    </g>
+
+    <!-- Out -->
+    <rect x="20" y="340" width="340" height="65" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1" />
+    <text x="190" y="365" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle">
+      Serial USB Output @ 9600 Baud
+    </text>
+    <text x="190" y="385" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">
+      Newline-delimited JSON Telemetry Packet
+    </text>
+  </g>
+
+  <!-- Right: ESP32 + L298N -->
+  <g transform="translate(530, 110)">
+    <rect width="380" height="430" rx="12" fill="url(#cardGrad3)" stroke="#3b82f6" stroke-width="1.5" />
+    <rect width="380" height="40" rx="12" fill="#2563eb" fill-opacity="0.2" />
+    <text x="190" y="26" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      ESP32 &amp; L298N - MOTOR LOCOMOTION
+    </text>
+
+    <!-- Table Header -->
+    <text x="25" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">ESP32 PIN</text>
+    <text x="140" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">L298N PIN</text>
+    <text x="240" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">CONTROL ACTION</text>
+    <line x1="20" y1="75" x2="360" y2="75" stroke="#334155" stroke-width="1" />
+
+    <!-- Rows -->
+    <g transform="translate(25, 95)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 26</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#38bdf8">IN1</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Left Motor Forward</text>
+    </g>
+
+    <g transform="translate(25, 135)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 27</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#38bdf8">IN2</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Left Motor Reverse</text>
+    </g>
+
+    <g transform="translate(25, 175)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 18</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#38bdf8">IN3</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Right Motor Forward</text>
+    </g>
+
+    <g transform="translate(25, 215)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 19</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#38bdf8">IN4</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Right Motor Reverse</text>
+    </g>
+
+    <g transform="translate(25, 255)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 25</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#f59e0b">ENA</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">PWM Speed (Left Motor)</text>
+    </g>
+
+    <g transform="translate(25, 295)">
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#f8fafc">GPIO 32</text>
+      <text x="115" y="0" font-family="monospace" font-size="12" fill="#f59e0b">ENB</text>
+      <text x="215" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">PWM Speed (Right Motor)</text>
+    </g>
+
+    <!-- Out -->
+    <rect x="20" y="340" width="340" height="65" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1" />
+    <text x="190" y="365" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">
+      Bluetooth Serial Interface
+    </text>
+    <text x="190" y="385" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">
+      Broadcasts as "ESP32_Car" (Commands: F, B, L, R, S)
+    </text>
+  </g>
+</svg>
